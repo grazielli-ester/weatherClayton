@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherClayton</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="history">
+    <a id="history_link" href="history.html"> <i  id="history_icon" class="fa-solid fa-clock-rotate-left"></i>  <span class="history_text">Histórico</span></a>
+  </div>
+
+  <main id="container">
+
+    <p id="alert"></p>
+
+    <header id="header">
+      <h1 id="title_principal">WeatherClayton</h1>
+      <form id="search">
+        <input type="text" id="city_name" placeholder="Digite o nome da cidade">
+        <select class="select">
+          <option class="select_first" disabled selected>Escolha uma unidade de medida</option>
+          <option value="Celsius">Celsius</option>
+          <option value="Fahrenheit">Fahrenheit</option>
+        </select>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </header>
+
+    <div id="loading">
+      <i class="fa-solid fa-spinner fa-spin"></i>
+      <p>Carregando dados do clima...</p>
+    </div>
+
+    <section id="weather">
+      <h2 id="title">Cidade, País</h2>
+
+      <div id="weather_content">
+        <div id="temp">
+          <div>
+            <p id="temp_value">-- °C</p>
+            <p id="temp_description">---</p>
+          </div>
+          <img id="temp_img" src="" alt="Clima">
+          
+        </div>
+
+        <div id="other_infos">
+          <div class="info">
+            <i id="temp_max_icon" class="fa-solid fa-temperature-high"></i>
+            <div>
+              <span>Máx</span>
+              <p id="temp_max">-- °C</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <i id="temp_min_icon" class="fa-solid fa-temperature-low"></i>
+            <div>
+              <span>Mín</span>
+              <p id="temp_min">-- °C</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <i id="humidity_icon" class="fa-solid fa-droplet"></i>
+            <div>
+              <span>Umidade</span>
+              <p id="humidity">--%</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <i id="wind_icon" class="fa-solid fa-wind"></i>
+            <div>
+              <span>Vento</span>
+              <p id="wind">-- km/h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <div id="five_days">    
+        
+      <div class="day">
+        <h2 class="day_title" id="day_title1" >Temp</h2>
+        <p class="day_descricao" id="day_descricao1" >Descrição</p>
+        <img class="day_img" id="day_img1" src="" alt="day">              
+      </div>
+
+      <div class="day">
+        <h2 class="day_title" id="day_title2" >Temp</h2>
+        <p class="day_descricao" id="day_descricao2" >Descrição</p>
+        <img class="day_img" id="day_img2" src="" alt="day">              
+      </div>
+
+      <div class="day">
+        <h2 class="day_title" id="day_title3" >Temp</h2>
+        <p class="day_descricao" id="day_descricao3" >Descrição</p>   
+        <img class="day_img" id="day_img3" src="" alt="day">           
+      </div>
+
+      <div class="day">
+        <h2 class="day_title" id="day_title4" >Temp</h2>
+        <p class="day_descricao" id="day_descricao4" >Descrição</p>    
+        <img class="day_img" id="day_img4" src="" alt="day">          
+      </div>
+
+      <div class="day">
+        <h2 class="day_title" id="day_title5" >Temp</h2>
+        <p class="day_descricao" id="day_descricao5" >Descrição</p>      
+        <img class="day_img" id="day_img5" src="" alt="day">        
+      </div>
+    </div>   
+
+  </main> 
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
